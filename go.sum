@@ -1,0 +1,4 @@
+github.com/flasherup/common v0.0.0-20220902070140-50046724767e h1:jj2dinC8Wd04aLSQb5ctbnEkWorHCtBqUkSgX0QsFR0=
+github.com/flasherup/common v0.0.0-20220902070140-50046724767e/go.mod h1:NJDog1taJjLVJyfp5CdUoi8pf8s3/KFFTTETZlG0T+0=
+github.com/streadway/amqp v1.0.0 h1:kuuDrUJFZL1QYL9hUNuCxNObNzB0bV/ZG5jV3RWAQgo=
+github.com/streadway/amqp v1.0.0/go.mod h1:AZpEONHx3DKn8O/DFsRAY58/XVQiIPMTMB1SddzLXVw=
