@@ -1,4 +1,4 @@
-module flasherup/rabbitmq_messenger
+module github.com/flasherup/rabbitmq_messenger
 
 go 1.19
 

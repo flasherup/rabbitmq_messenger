@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"encoding/json"
-	"flasherup/rabbitmq_messenger/broker"
 	"fmt"
+	"github.com/flasherup/rabbitmq_messenger/broker"
 	"github.com/streadway/amqp"
 	"log"
 	"time"
@@ -41,7 +41,7 @@ func main() {
 	if err != nil {
 		log.Fatal("Marshal error", err)
 	}
-	err = b1.SendMessage(amqp.Publishing{
+	err = b1.SendMessageRaw(amqp.Publishing{
 		ContentType: "text/x-json",
 		MessageId:   "messageVeryFirst",
 		Body:        b,
@@ -93,7 +93,7 @@ func readSend(msg amqp.Delivery, broker *broker.Broker, messageId string) {
 	if err != nil {
 		log.Fatal("Marshal error", err)
 	}
-	err = broker.SendMessage(amqp.Publishing{
+	err = broker.SendMessageRaw(amqp.Publishing{
 		ContentType: "text/x-json",
 		MessageId:   messageId,
 		Type:        "Message",
