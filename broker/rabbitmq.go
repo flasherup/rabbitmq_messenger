@@ -178,3 +178,10 @@ func getCtxValue(ctx context.Context, key string) (string, bool) {
 	value, ok := urlValue.(string)
 	return value, ok
 }
+
+func GetBaseMessage(d amqp.Delivery) *BaseMessage {
+	return &BaseMessage{
+		MessageId:   d.MessageId,
+		MessageType: d.Type,
+	}
+}
