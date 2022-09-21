@@ -181,7 +181,6 @@ func getCtxValue(ctx context.Context, key string) (string, bool) {
 
 func GetBaseMessage(d amqp.Delivery) *BaseMessage {
 	return &BaseMessage{
-		MessageId:   d.MessageId,
-		MessageType: d.Type,
+		Delivery: d,
 	}
 }

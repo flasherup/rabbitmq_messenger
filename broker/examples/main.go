@@ -96,7 +96,7 @@ func readSend(msg amqp.Delivery, broker *broker.Broker, messageId string) {
 	err = broker.SendMessageRaw(amqp.Publishing{
 		ContentType: "text/x-json",
 		MessageId:   messageId,
-		Type:        "Message",
+		Type:        "Postmen",
 		Body:        b,
 	})
 	if err != nil {

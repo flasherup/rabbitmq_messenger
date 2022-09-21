@@ -1,6 +1,12 @@
 package broker
 
+import "github.com/streadway/amqp"
+
 type BaseMessage struct {
-	MessageId   string
-	MessageType string
+	amqp.Delivery
+}
+
+type ErrorRsp struct {
+	Message string `json:"message"`
+	Error   string `json:"error"`
 }
